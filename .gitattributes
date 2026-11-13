@@ -1,0 +1,4 @@
+# Strip notebook outputs and execution counts on commit.
+# Requires a one-time `nbstripout --install` per clone (see README).
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb

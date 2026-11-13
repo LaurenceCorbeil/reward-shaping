@@ -1,0 +1,11 @@
+# Python 3.12
+# Core
+numpy==2.5.4
+matplotlib==3.11.2
+gymnasium==1.4.0
+tqdm==4.70.1
+
+# Notebooks
+jupyterlab==4.6.6
+ipykernel==7.4.0
+nbstripout==0.9.1
