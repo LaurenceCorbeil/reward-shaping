@@ -4,7 +4,7 @@ This repository is an ongoing project on the topic of reward shaping, with the g
 
 ## Collaborators
 
-Benjamin Piché
-Vincent Lachapelle
-Laurence Corbeil
-Thibaud Chasteauneuf
+- Benjamin Piché
+- Vincent Lachapelle
+- Laurence Corbeil
+- Thibaud Chasteauneuf
