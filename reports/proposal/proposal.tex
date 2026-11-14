@@ -1,0 +1,115 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2026
+
+% The authors should use one of these tracks.
+% Before accepting by the NeurIPS conference, select one of the options below.
+% 0. "default" for submission
+\usepackage[main, final]{neurips_2026}
+% the "default" option is equal to the "main" option, which is used for the Main Track with double-blind reviewing.
+% 1. "main" option is used for the Main Track
+%  \usepackage[main]{neurips_2026}
+% 2. "position" option is used for the Position Paper Track
+%  \usepackage[position]{neurips_2026}
+% 3. "eandd" option is used for the Evaluations & Datasets Track
+ % \usepackage[eandd]{neurips_2026}
+% 4. "creativeai" option is used for the Creative AI Track
+%  \usepackage[creativeai]{neurips_2026}
+% 5. "sglblindworkshop" option is used for the Workshop with single-blind reviewing
+ % \usepackage[sglblindworkshop]{neurips_2026}
+% 6. "dblblindworkshop" option is used for the Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop]{neurips_2026}
+% 7. "education" option is used for the Education Track
+%  \usepackage[education]{neurips_2026}
+
+
+% After being accepted, the authors should add "final" behind the track to compile a camera-ready version.
+% 1. Main Track
+ % \usepackage[main, final]{neurips_2026}
+% 2. Position Paper Track
+%  \usepackage[position, final]{neurips_2026}
+% 3. Evaluations & Datasets Track
+ % \usepackage[eandd, final]{neurips_2026}
+% 4. Creative AI Track
+%  \usepackage[creativeai, final]{neurips_2026}
+% 5. Workshop with single-blind reviewing
+%  \usepackage[sglblindworkshop, final]{neurips_2026}
+% 6. Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop, final]{neurips_2026}
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote.
+% For workshops (5., 6.), the authors should add the name of the workshop, "\workshoptitle" command is used to set the workshop title.
+% \workshoptitle{WORKSHOP TITLE}
+% 7. Education Track
+% \usepackage[education, final]{neurips_2026}
+
+% "preprint" option is used for arXiv or other preprint submissions
+ % \usepackage[preprint]{neurips_2026}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{Project Proposal: Potential-based Shaping Rewards Educational Notebook}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{
+  Thibaud Chasteauneuf, \\
+  \And
+  Laurence Corbeil, \\
+  \And
+  Vincent Lachapelle, \\
+  \And
+  Benjamin Piché \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\section{Project description}
+
+Most Reinforcement Learning (RL) algorithms struggle in environments with sparse rewards. Even in model-based methods, this very small signal is diluted through the state-action space and takes time to propagate. Such environments are not rare: in most competitive two-player game settings, the reward function is best modeled by a value of $ \pm 1 $ at the terminal state, representing either the agent won or lost. Reward shaping solves this problem by introducing additional reward within the environment. However, this method also introduces new challenges. Not only does creating the shaping rewards function usually require expert knowledge on the current problem, the optimal policy of the enriched environment must also be proven optimal in the original environment. 
+
+This educational notebook will explore this subject. It will start by demonstrating the problem with an example where Q-learning struggles to converge due to reward sparsity. It will then present the concept of reward shaping and immediately demonstrate the problem of policy invariance by giving examples where additional rewards introduce undesired behaviors in the agent (e.g., the football player and the cyclist). Then, it will introduce the concept of potential-based reward functions and prove, using the same mathematical formalism as seen in class, that such functions allow us to ensure policy invariance. The notebook will then demonstrate the benefits of this method by using it to improve the performance of the Q-learning algorithm in the initial environment settings and show that the learned policy is optimal in both settings by comparing it to the one learned by value iteration. Finally, it will broaden the discussion by briefly exploring how constraint programming can help us create those potential-based functions with less expert knowledge, and the concept of Q-value initialization, another RL technique that shows the same benefits as reward shaping.
+
+
+\section{Literature review}
+
+The article "Policy invariance under reward transformations: Theory and application to reward shaping", by Ng et al. (1999) is the backbone of this project. We will adapt their demonstration of the sufficiency and necessity of potential-based functions for reward shaping to the material seen in class to teach this concept, and add details from more recent studies (Grzes, 2017; [...]) to further complete their work. The article cited from Wiewiora (2003) and from Yin (2024) will be used in the conclusion to support the concepts of Q-value initialization and reward shaping through CP, respectively.
+
+
+\section*{References}
+
+{
+\small
+
+TODO
+
+}
+
+
+\end{document}
