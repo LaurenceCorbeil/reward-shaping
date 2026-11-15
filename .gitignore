@@ -22,6 +22,8 @@ Thumbs.db
 *.snm
 *.vrb
 # Compiled reports (rebuild from source; figures in reports/**/figures are kept)
+reports/*/proposal.pdf
+reports/*/report.pdf
 reports/*/neurips_2026.pdf
 
 # --- Python ---

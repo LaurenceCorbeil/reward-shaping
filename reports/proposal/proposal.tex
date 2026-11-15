@@ -74,13 +74,13 @@
 
 
 \author{
-  Thibaud Chasteauneuf, \\
+  Thibaud Chasteauneuf \\ Polytechnique Montréal \\ thibaud.chasteauneuf@etud.polymtl.ca
   \And
-  Laurence Corbeil, \\
+  Laurence Corbeil \\ Polytechnique Montréal \\ laurence.corbeil@etud.polymtl.ca
   \And
-  Vincent Lachapelle, \\
+  Vincent Lachapelle \\ Polytechnique Montréal \\ vincent.lachapelle-2@etud.polymtl.ca
   \And
-  Benjamin Piché \\
+  Benjamin Piché \\ Polytechnique Montréal \\ benjamin.piche@etud.polymtl.ca
 }
 
 
@@ -90,26 +90,17 @@
 \maketitle
 
 
-\section{Project description}
+\section*{Project Description}
 
-Most Reinforcement Learning (RL) algorithms struggle in environments with sparse rewards. Even in model-based methods, this very small signal is diluted through the state-action space and takes time to propagate. Such environments are not rare: in most competitive two-player game settings, the reward function is best modeled by a value of $ \pm 1 $ at the terminal state, representing either the agent won or lost. Reward shaping solves this problem by introducing additional reward within the environment. However, this method also introduces new challenges. Not only does creating the shaping rewards function usually require expert knowledge on the current problem, the optimal policy of the enriched environment must also be proven optimal in the original environment. 
+Many Reinforcement Learning (RL) algorithms struggle in environments with sparse rewards. Even in model-based methods, this very small signal is diluted through the state-action space and takes time to propagate. Such environments are not rare: in most competitive two-player game settings, the reward function can naturally be modeled by a value of $ \pm 1 $ at the terminal state, representing whether the agent won or lost. Reward shaping mitigates this problem by introducing additional rewards within the environment. However, this method also introduces new challenges. Not only does creating the shaping rewards function usually require expert knowledge on the current problem, but the optimal policy of the enriched environment must also be proven optimal in the original environment.
 
-This educational notebook will explore this subject. It will start by demonstrating the problem with an example where Q-learning struggles to converge due to reward sparsity. It will then present the concept of reward shaping and immediately demonstrate the problem of policy invariance by giving examples where additional rewards introduce undesired behaviors in the agent (e.g., the football player and the cyclist). Then, it will introduce the concept of potential-based reward functions and prove, using the same mathematical formalism as seen in class, that such functions allow us to ensure policy invariance. The notebook will then demonstrate the benefits of this method by using it to improve the performance of the Q-learning algorithm in the initial environment settings and show that the learned policy is optimal in both settings by comparing it to the one learned by value iteration. Finally, it will broaden the discussion by briefly exploring how constraint programming can help us create those potential-based functions with less expert knowledge, and the concept of Q-value initialization, another RL technique that shows the same benefits as reward shaping.
+Our project will be an educational notebook that explore this subject. It will start by demonstrating the problem with an example where Q-learning struggles to converge due to reward sparsity. It will then present the concept of reward shaping and immediately demonstrate the problem of policy invariance by giving examples where additional rewards introduce undesired behaviors in the agent (inspired by the example of a soccer-playing agent rewarded for touching the ball, which learned to stay next to it and ``vibrate'', that is, touching it multiple times in quick succession instead of actually playing the game). Then, it will introduce the concept of potential-based reward functions and prove, using the same mathematical formalism seen in class, that such functions allow us to ensure policy invariance. The notebook will then demonstrate the benefits of this method by using it to improve the performance of the Q-learning algorithm in the initial environment settings and show that the learned policy is optimal in both settings by comparing it to the one learned by value iteration. Finally, it will broaden the discussion by briefly exploring how constraint programming can help us create those potential-based functions with less expert knowledge, and the concept of Q-value initialization, another RL technique that shows the same benefits as reward shaping.
 
+\section*{Literature Review}
 
-\section{Literature review}
+The article ``Policy invariance under reward transformations: Theory and application to reward shaping'' by \citet{ng1999} is the backbone of this project. We will adapt their demonstration of the sufficiency and necessity of potential-based functions for reward shaping to the material seen in class to teach this concept, and add details from more recent studies to further complete their work. For instance, we will reference \citet{grzes2017}, who study episodic tasks and potential-based reward shaping specifically under both model-free and model-based approaches. In addition, to explain why shaping speeds up learning, we will refer to \citet{laud2003}, who use the concept of reward horizon (how far the agent must look to receive informative feedback) to explain this speed increase. It views reward shaping simply as a reduction of the reward horizon of the agent. Another interesting article we can use is from \citet{grzes2010}, who demonstrate how to learn the potential function online in the absence of expert knowledge about the domain, which can be quite useful in the experimental section of the notebook. The articles by \citet{wiewiora2003} and \citet{yin2025} will be used in the conclusion to support the concepts of Q-value initialization and reward shaping through constraint programming, respectively. The latter is co-authored by a professor from Polytechnique, whose work is a strong motivation for pursuing this project in particular.
 
-The article "Policy invariance under reward transformations: Theory and application to reward shaping", by Ng et al. (1999) is the backbone of this project. We will adapt their demonstration of the sufficiency and necessity of potential-based functions for reward shaping to the material seen in class to teach this concept, and add details from more recent studies (Grzes, 2017; [...]) to further complete their work. The article cited from Wiewiora (2003) and from Yin (2024) will be used in the conclusion to support the concepts of Q-value initialization and reward shaping through CP, respectively.
-
-
-\section*{References}
-
-{
-\small
-
-TODO
-
-}
-
+\bibliographystyle{plainnat}
+\bibliography{references}
 
 \end{document}

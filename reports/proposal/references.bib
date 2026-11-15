@@ -1,0 +1,79 @@
+@inproceedings{ng1999,
+    author = {Ng, Andrew Y. and Harada, Daishi and Russell, Stuart J.},
+    title = {Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping},
+    year = {1999},
+    isbn = {1558606122},
+    publisher = {Morgan Kaufmann Publishers Inc.},
+    address = {San Francisco, CA, USA},
+    booktitle = {Proceedings of the Sixteenth International Conference on Machine Learning},
+    pages = {278–287},
+    numpages = {10},
+    series = {ICML '99}
+}
+
+@article{wiewiora2003,
+    author = {Wiewiora, Eric},
+    title = {Potential-based shaping and Q-value initialization are equivalent},
+    year = {2003},
+    issue_date = {July 2003},
+    publisher = {AI Access Foundation},
+    address = {El Segundo, CA, USA},
+    volume = {19},
+    number = {1},
+    issn = {1076-9757},
+    abstract = {Shaping has proven to be a powerful but precarious means of improving reinforcement learning performance. Ng, Harada, and Russell (1999) proposed the potential-based shaping algorithm for adding shaping rewards in a way that guarantees the learner will learn optimal behavior.In this note, we prove certain similarities between this shaping algorithm and the initialization step required for several reinforcement learning algorithms. More specifically, we prove that a reinforcement learner with initial Q-values based on the shaping algorithm's potential function make the same updates throughout learning as a learner receiving potential-based shaping rewards. We further prove that under a broad category of policies, the behavior of these two learners are indistinguishable. The comparison provides intuition on the theoretical properties of the shaping algorithm as well as a suggestion for a simpler method for capturing the algorithm's benefit. In addition, the equivalence raises previously unaddressed issues concerning the efficiency of learning with potential-based shaping.},
+    journal = {J. Artif. Int. Res.},
+    month = sep,
+    pages = {205–208},
+    numpages = {4}
+}
+
+@inproceedings{grzes2017,
+    author = {Grze{\'s}, Marek},
+    title = {Reward Shaping in Episodic Reinforcement Learning},
+    year = {2017},
+    publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+    address = {Richland, SC},
+    abstract = {Recent advancements in reinforcement learning confirm that reinforcement learning techniques can solve large scale problems leading to high quality autonomous decision making. It is a matter of time until we will see large scale applications of reinforcement learning in various sectors, such as healthcare and cyber-security, among others. However, reinforcement learning can be time-consuming because the learning algorithms have to determine the long term consequences of their actions using delayed feedback or rewards. Reward shaping is a method of incorporating domain knowledge into reinforcement learning so that the algorithms are guided faster towards more promising solutions. Under an overarching theme of episodic reinforcement learning, this paper shows a unifying analysis of potential-based reward shaping which leads to new theoretical insights into reward shaping in both model-free and model-based algorithms, as well as in multi-agent reinforcement learning.},
+    booktitle = {Proceedings of the 16th Conference on Autonomous Agents and MultiAgent Systems},
+    pages = {565–573},
+    numpages = {9},
+    keywords = {multiagent learning, potential-based reward shaping, reinforcement learning, reward shaping, reward structures for learning},
+    location = {S{\~a}o Paulo, Brazil},
+    series = {AAMAS '17}
+}
+
+@inproceedings{laud2003,
+    author = {Laud, Adam and DeJong, Gerald},
+    title = {The influence of reward on the speed of reinforcement learning: an analysis of shaping},
+    year = {2003},
+    isbn = {1577351894},
+    publisher = {AAAI Press},
+    abstract = {Shaping can be an effective method for improving the learning rate in reinforcement systems. Previously, shaping has been heuristically motivated and implemented. We provide a formal structure with which to interpret the improvement afforded by shaping rewards. Central to our model is the idea of a reward horizon, which focuses exploration on an MDP's critical region, a subset of states with the property that any policy that performs well on the critical region also performs well on the MDP. We provide a simple algorithm and prove that its learning time is polynomial in the size of the critical region and, crucially, independent of the size of the MDP. This identifies low reward horizons with easy-to-learn MDPs. Shaping rewards, which encode our prior knowledge about the relative merits of decisions, can be seen as artificially reducing the MDP's natural reward horizon. We demonstrate empirically the effects of using shaping to reduce the reward horizon.},
+    booktitle = {Proceedings of the Twentieth International Conference on International Conference on Machine Learning},
+    pages = {440–447},
+    numpages = {8},
+    location = {Washington, DC, USA},
+    series = {ICML'03}
+}
+
+@article{grzes2010,
+    author = {Grzes, Marek and Kudenko, Daniel},
+    year = {2010},
+    month = {05},
+    pages = {541-50},
+    title = {Online learning of shaping rewards in reinforcement learning},
+    volume = {23},
+    journal = {Neural networks : the official journal of the International Neural Network Society},
+    doi = {10.1016/j.neunet.2010.01.001}
+}
+
+@inbook{yin2025,
+    author = {Yin, Chao and Cappart, Quentin and Pesant, Gilles},
+    year = {2025},
+    month = {06},
+    pages = {252-269},
+    title = {Shaping Reward Signals in Reinforcement Learning Using Constraint Programming},
+    isbn = {978-3-031-95975-2},
+    doi = {10.1007/978-3-031-95976-9_16}
+}
